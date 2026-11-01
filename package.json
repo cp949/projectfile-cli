@@ -1,0 +1,49 @@
+{
+  "name": "@cp949/projectfile-cli",
+  "version": "0.1.0",
+  "description": "@cp949/projectfile 형식의 프로젝트 파일을 폴더와 서로 변환하는 CLI",
+  "keywords": [
+    "cli",
+    "projectfile",
+    "scramble"
+  ],
+  "license": "MIT",
+  "author": "cp949",
+  "bin": {
+    "projectfile": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "type": "module",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "check-types": "tsc --noEmit",
+    "test": "vitest run",
+    "lint": "oxlint",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
+    "verify": "pnpm lint && pnpm format:check && pnpm check-types && pnpm test && pnpm build",
+    "prepublishOnly": "pnpm run build"
+  },
+  "dependencies": {
+    "@cp949/projectfile": "^0.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.5",
+    "oxfmt": "0.75.0",
+    "oxlint": "1.90.0",
+    "tsdown": "0.23.3",
+    "typescript": "7.0.2",
+    "vitest": "5.0.5"
+  },
+  "engines": {
+    "node": ">=24.18"
+  },
+  "packageManager": "pnpm@12.15.0"
+}

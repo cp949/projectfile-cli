@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "isolatedModules": true,
+    "lib": ["es2024"],
+    "types": ["node"],
+    "module": "NodeNext",
+    "moduleDetection": "force",
+    "moduleResolution": "NodeNext",
+    "noUncheckedIndexedAccess": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "ES2024",
+    "noEmit": true,
+    "allowImportingTsExtensions": true
+  },
+  "include": ["src", "tests", "vitest.config.mts", "tsdown.config.ts"],
+  "exclude": ["node_modules", "dist"]
+}
