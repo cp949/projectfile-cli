@@ -7,8 +7,16 @@
     "projectfile",
     "scramble"
   ],
+  "homepage": "https://github.com/cp949/projectfile-cli#readme",
+  "bugs": {
+    "url": "https://github.com/cp949/projectfile-cli/issues"
+  },
   "license": "MIT",
   "author": "cp949",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cp949/projectfile-cli.git"
+  },
   "bin": {
     "projectfile": "./dist/cli.js"
   },
